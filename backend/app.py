@@ -15,6 +15,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib import colors
 from reportlab.pdfgen import canvas
 import io
+from send_otp import otp_blueprint, init_otp
 
 from config import Config
 
