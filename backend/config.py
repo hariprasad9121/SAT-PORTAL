@@ -35,7 +35,8 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # Secret key
-    SECRET_KEY = 'your-secret-key-here'
+    SECRET_KEY = '1d3c5f9e1a2b4d6f8c9e0b7a3e4f6d1c9a2e4b5f6d7c8a9e1f2b3c4d5e6f7a8b'
+
     
     # Upload folder
     UPLOAD_FOLDER = 'uploads' 
