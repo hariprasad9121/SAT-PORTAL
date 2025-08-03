@@ -8,6 +8,7 @@ import StudentCertificates from './pages/StudentCertificates';
 import AdminDashboard from './pages/AdminDashboard';
 import StudentRegister from './pages/StudentRegister';
 import './App.css';
+import SendOtp from './components/SendOtp';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -164,9 +165,12 @@ function App() {
                   )
                 ) : (
                   <Navigate to="/login" />
+                  <Route path="/send-otp" element={<SendOtp />} />
+
                 )
               } 
             />
+            <Route path="/send-otp" element={<SendOtp />} />
           </Routes>
         </Container>
       </div>
