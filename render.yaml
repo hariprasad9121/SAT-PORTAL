@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: flask-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MAIL_USERNAME
+        value: anil172900@gmail.com         # Change to your email
+      - key: MAIL_PASSWORD
+        value: kfsa nvkp ntmj fgxh          # App password, not your email password
+      - key: SECRET_KEY
+        value: 1d3c5f9e1a2b4d6f8c9e0b7a3e4f6d1c9a2e4b5f6d7c8a9e1f2b3c4d5e6f7a8b
+
+  - type: web
+    name: react-frontend
+    env: static
+    rootDir: client
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
